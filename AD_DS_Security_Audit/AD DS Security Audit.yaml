@@ -76,25 +76,6 @@ zabbix_export:
               expression: 'logseverity(/AD DS Security Audit/eventlog[Security,,,,^4723$])>1 and nodata(/AD DS Security Audit/eventlog[Security,,,,^4723$],600s)=0'
               name: 'An attempt was made to change an account''s password.'
         -
-          uuid: b6fbd6ff6c994d8c854644c6092c6f75
-          name: 'Windows Security (ID4724)'
-          type: ZABBIX_ACTIVE
-          key: 'eventlog[Security,,,,^4724$]'
-          delay: 5m
-          history: 1w
-          trends: '0'
-          value_type: LOG
-          tags:
-            -
-              tag: Application
-              value: 'Security events'
-          triggers:
-            -
-              uuid: 8c16af4f9d2f498cb71f8b69ee756053
-              expression: 'logseverity(/AD DS Security Audit/eventlog[Security,,,,^4724$])>1 and nodata(/AD DS Security Audit/eventlog[Security,,,,^4724$],600s)=0'
-              name: 'An attempt was made to reset an account''s password.'
-              priority: INFO
-        -
           uuid: 11cda07d18cf4362b8048e2110c76895
           name: 'Windows Security (ID4725)'
           type: ZABBIX_ACTIVE
@@ -243,24 +224,6 @@ zabbix_export:
               expression: 'logseverity(/AD DS Security Audit/eventlog[Security,,,,^4767$])>1 and nodata(/AD DS Security Audit/eventlog[Security,,,,^4767$],600s)=0'
               name: 'A user account was unlocked.'
               priority: INFO
-        -
-          uuid: e736d163e4964acd90f185943d84cfd1
-          name: 'Windows Security (ID4780)'
-          type: ZABBIX_ACTIVE
-          key: 'eventlog[Security,,,,^4780$]'
-          delay: 5m
-          history: 1w
-          trends: '0'
-          value_type: LOG
-          tags:
-            -
-              tag: Application
-              value: 'Security events'
-          triggers:
-            -
-              uuid: a02b27e8dedc404ab50144a946b85a02
-              expression: 'logseverity(/AD DS Security Audit/eventlog[Security,,,,^4780$])>1 and nodata(/AD DS Security Audit/eventlog[Security,,,,^4780$],600s)=0'
-              name: 'The ACL was set on accounts which are members of administrators groups.'
         -
           uuid: 8a5b8ead83a3499894689b37ab091a31
           name: 'Windows Security (ID4781)'

@@ -50,14 +50,14 @@ zabbix_export:
               priority: HIGH
         - uuid: 79d0888253334aa8affb80fce6feae15
           name: 'RDS Active sessions'
-          key: 'perf_counter[\Terminal Services\Active sessions]'
+          key: 'perf_counter_en[\Terminal Services\Active sessions]'
           history: 1w
           tags:
             - tag: Application
               value: RDS
         - uuid: 8ce6c18ff883491fb38654c4c360f418
           name: 'RDS Inactive sessions'
-          key: 'perf_counter[\Terminal Services\Inactive Sessions]'
+          key: 'perf_counter_en[\Terminal Services\Inactive Sessions]'
           history: 1w
           tags:
             - tag: Application
